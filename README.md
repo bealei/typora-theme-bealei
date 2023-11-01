@@ -1,6 +1,7 @@
 # typora-theme-bealei
 
 Gitee：[https://gitee.com/bealei](https://gitee.com/bealei)
+
 Github：[https://github.com/bealei](https://github.com/bealei)
 
 #### 介绍
@@ -9,6 +10,7 @@ Github：[https://github.com/bealei](https://github.com/bealei)
 
 #### 软件架构
 浅色模式由 github 主题改造。
+
 暗色模式借鉴 OneDark 配色。
 
 
