@@ -1,0 +1,115 @@
+/**
+ * @param 自动标题计数
+ * @time：2023.11.01
+ * @author：bealei
+*/
+
+
+/* -------------------自动序号 start------------------- */
+
+
+/* 重置计数器 */
+h1 {
+  counter-reset: h3;
+}
+
+h2 {
+  counter-reset: h3;
+}
+
+h3 {
+  counter-reset: h4;
+}
+
+h4 {
+  counter-reset: h5;
+}
+
+h5 {
+  counter-reset: h6;
+}
+
+.outline-h1 {
+  counter-reset: outline-h3;
+}
+
+.outline-h2 {
+  counter-reset: outline-h3;
+}
+
+.outline-h3 {
+  counter-reset: outline-h4;
+}
+
+.outline-h4 {
+  counter-reset: outline-h5;
+}
+
+/* 正文的编号 */
+#write h3:before,
+h3.md-focus.md-heading:before {
+  /** override the default style for focused headings */
+  counter-increment: h3;
+  content: counter(h3) "、";
+}
+
+#write h4:before,
+h4.md-focus.md-heading:before {
+  counter-increment: h4;
+  content: counter(h3) "." counter(h4) " ";
+}
+
+#write h5:before,
+h5.md-focus.md-heading:before {
+  counter-increment: h5;
+  content: counter(h3) "." counter(h4) "." counter(h5) " "
+}
+
+/* 鼠标选择输入文字的时候不会放大缩小 */
+#write>h3.md-focus:before,
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before,
+h3.md-focus:before,
+h4.md-focus:before,
+h5.md-focus:before,
+h6.md-focus:before {
+  color: inherit;
+  border: inherit;
+  border-radius: inherit;
+  position: inherit;
+  left: initial;
+  float: none;
+  top: initial;
+  font-size: inherit;
+  padding-left: inherit;
+  padding-right: inherit;
+  vertical-align: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+
+/* 序号添加标点符号 */
+.outline-content .outline-h3 .outline-label:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h3) "、";
+}
+
+.outline-content .outline-h4 .outline-label:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h3) "." counter(outline-h4) " ";
+}
+
+.outline-content .outline-h5 .outline-label:before {
+  counter-increment: outline-h5;
+  content: counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) " ";
+}
+
+/* 必须补全 */
+.outline-content .outline-h6 .outline-label:before {
+  content: none;
+}
+
+
+/* -------------------自动序号 end------------------- */
